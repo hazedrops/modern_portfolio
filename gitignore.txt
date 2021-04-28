@@ -1,0 +1,3 @@
+node_modules
+
+// Supposed to be saved as .gitignore file
