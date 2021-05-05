@@ -1,6 +1,7 @@
-@import 'config';
-@import 'menu';
-@import 'mobile';
+@import '_config';
+@import '_menu';
+@import '_mobile';
+@import '_projects';
 
 * {
   box-sizing: border-box;
@@ -8,6 +9,10 @@
 
 body {
   @include background;
+
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
   background: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
@@ -24,10 +29,11 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 5rem;
+    font-size: 3rem;
   }
 
   &.sm-heading {
+    font-size: 1.5rem;
     margin-bottom: 3rem;
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
@@ -76,6 +82,7 @@ main {
 }
 
 // About Page
+
 .about-info {
   display: grid;
   grid-gap: 2.5em;
@@ -96,10 +103,18 @@ main {
 
   .bio {
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    // h3 {
+    //   font-size: 1.2em;
+    // }
+
+    // p {
+    //   font-size: 1em;
+    // }
   }
 
   .job-1 {
@@ -108,7 +123,7 @@ main {
     h3 {
       font-size: 1.5em;
       font-weight: 500;
-      margin-bottom: .8em;
+      margin-bottom: 0.8em;
     }
   }
 
@@ -118,7 +133,7 @@ main {
     h3 {
       font-size: 1.5em;
       font-weight: 500;
-      margin-bottom: .8em;
+      margin-bottom: 0.8em;
     }
   }
 
@@ -139,16 +154,24 @@ main {
   grid-gap: 2rem;
   grid-auto-rows: 1fr;
   grid-template-columns: repeat(3, 1fr);
+  
+  .item {
+    a:nth-child(2) {
+      font-size: .8em;
+    }
 
-  img {
-    width: 100%;
-    height: 30vh;
-    border: 3px #fff solid;
+    img {
+      width: 100%;
+      height: 30vh;
+      object-fit: fill;
+      overflow: hidden;
+      border: 3px #fff solid;
 
-    &:hover {
-      opacity: 0.5;
-      border-color: $secondary-color;
-      @include easeOut;
+      &:hover {
+        opacity: 0.5;
+        border-color: $secondary-color;
+        @include easeOut;
+      }
     }
   }
 }
@@ -184,13 +207,13 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
 
   div {
     font-size: 2rem;
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     @include easeOut;
 
     &:hover {

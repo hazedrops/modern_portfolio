@@ -93,20 +93,24 @@
   transition-delay: 0.4s; }
 
 @media screen and (min-width: 1171px) {
-  .projects {
+  main .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
-  .projects {
+  main .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
+    align-items: center; }
+    main h1.lg-heading {
       line-height: 1;
-      margin-bottom: 1rem; }
+      margin-bottom: .7em;
+      font-size: 2.4em; }
+    main h2.sm-heading {
+      font-size: 1.2em; }
+    main .projects {
+      grid-template-columns: repeat(2, 1fr); }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -131,16 +135,70 @@
       border-radius: 50%;
       border: solid 3px #eece1a; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
-    grid-template-columns: 1fr; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
-  .projects {
+  main .projects {
     grid-template-columns: 1fr; } }
+
+.projectMain {
+  width: 80%;
+  max-width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto; }
+  .projectMain .project-info {
+    display: flex;
+    flex-direction: column; }
+    .projectMain .project-info .project-images {
+      display: grid;
+      grid-gap: 1em;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      margin-top: 8vh; }
+      .projectMain .project-info .project-images .project-image {
+        width: 35vw;
+        height: 60vh; }
+        .projectMain .project-info .project-images .project-image img {
+          width: 100%;
+          padding: 1em; }
+    .projectMain .project-info .project-desc {
+      margin-top: 8vh; }
+      .projectMain .project-info .project-desc .text-secondary {
+        display: inline-block;
+        padding: 0.5em;
+        border-bottom: 1px solid #eece1a; }
+      .projectMain .project-info .project-desc button {
+        font-size: 1em;
+        background: #eece1a;
+        color: #444;
+        padding: 0.85em 0.75em;
+        position: relative;
+        z-index: 1;
+        overflow: hidden; }
+      .projectMain .project-info .project-desc button:hover {
+        color: #eece1a; }
+      .projectMain .project-info .project-desc button::after {
+        content: '';
+        background: #444;
+        position: absolute;
+        z-index: -1;
+        padding: 0.85em 0.75em;
+        display: block; }
+      .projectMain .project-info .project-desc button.goToGit::after {
+        left: -20%;
+        right: -20%;
+        top: 0;
+        bottom: 0;
+        transform: skewX(-45deg) scale(0, 1);
+        transition: all 0.3s ease; }
+      .projectMain .project-info .project-desc button.goToGit:hover::after {
+        transform: skewX(-45deg) scale(1, 1);
+        transition: all 0.3s ease-out; }
 
 * {
   box-sizing: border-box; }
@@ -157,7 +215,7 @@ body {
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       right: 0;
@@ -174,10 +232,11 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 5rem; }
+    font-size: 3rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
+    font-size: 1.5rem;
     margin-bottom: 3rem;
     padding: 0.2rem 1rem;
     background: rgba(73, 73, 73, 0.5); }
@@ -224,7 +283,7 @@ main {
     border: #eece1a 3px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     display: flex;
     flex-direction: column;
     justify-content: center; }
@@ -233,13 +292,13 @@ main {
     .about-info .job-1 h3 {
       font-size: 1.5em;
       font-weight: 500;
-      margin-bottom: .8em; }
+      margin-bottom: 0.8em; }
   .about-info .job-2 {
     grid-area: job2; }
     .about-info .job-2 h3 {
       font-size: 1.5em;
       font-weight: 500;
-      margin-bottom: .8em; }
+      margin-bottom: 0.8em; }
   .about-info .job {
     background: #515151;
     padding: 0.5rem;
@@ -250,11 +309,15 @@ main {
   grid-gap: 2rem;
   grid-auto-rows: 1fr;
   grid-template-columns: repeat(3, 1fr); }
-  .projects img {
+  .projects .item a:nth-child(2) {
+    font-size: .8em; }
+  .projects .item img {
     width: 100%;
     height: 30vh;
+    object-fit: fill;
+    overflow: hidden;
     border: 3px #fff solid; }
-    .projects img:hover {
+    .projects .item img:hover {
       opacity: 0.5;
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
@@ -281,12 +344,12 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem; }
+  margin-top: 2rem; }
   .boxes div {
     font-size: 2rem;
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
