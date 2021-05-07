@@ -16,8 +16,8 @@
 
     .project-images {
       display: grid;
-      grid-gap: 1em;
-      // grid-auto-rows: 1fr;
+      grid-gap: 2em;
+      grid-auto-rows: 1fr;
       grid-template-columns: repeat(2, 1fr);
       justify-content: space-between;
       margin-top: 8vh;
@@ -28,7 +28,7 @@
 
         img {
           width: 100%;
-          padding: 1em;
+          padding: 2em;
           // height: 30vh;
         }
       }
