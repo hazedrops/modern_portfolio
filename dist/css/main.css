@@ -145,8 +145,7 @@
     grid-template-columns: 1fr; } }
 
 .projectMain {
-  width: 80%;
-  max-width: 70vw;
+  max-width: 80vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,8 +161,8 @@
       justify-content: space-between;
       margin-top: 8vh; }
       .projectMain .project-info .project-images .project-image {
-        width: 35vw;
-        height: 60vh; }
+        width: 38vw;
+        height: 55vh; }
         .projectMain .project-info .project-images .project-image img {
           width: 100%;
           padding: 2em; }
@@ -255,6 +254,7 @@ header {
   color: #eece1a; }
 
 main {
+  max-width: 80vw;
   padding: 4rem;
   min-height: calc(100vh - 60px); }
   main .icons {
@@ -305,13 +305,20 @@ main {
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
 
+#workBody .container {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto; }
+
 .projects {
   display: grid;
   grid-gap: 2rem;
   grid-auto-rows: 1fr;
   grid-template-columns: repeat(3, 1fr); }
   .projects .item a:nth-child(2) {
-    font-size: .8em; }
+    font-size: 0.8em; }
   .projects .item img {
     width: 100%;
     height: 30vh;
