@@ -6,9 +6,9 @@
   align-items: center;
   margin: 0 auto;
 
-  h1 {
-    // align-self: flex-start;
-  }
+  // h1 {
+  //   align-content: flex-start;
+  // }
 
   .project-info {
     display: flex;
@@ -53,10 +53,14 @@
         position: relative;
         z-index: 1;
         overflow: hidden;
+
+        a {
+          color: #222;
+        }
       }
 
       button:hover {
-        color: $secondary-color;
+        // color: $secondary-color;
       }
 
       button::after {
@@ -74,7 +78,7 @@
         top: 0;
         bottom: 0;
         transform: skewX(-45deg) scale(0, 1);
-        transition: all 0.3s ease;
+        transition: all 0.3s ease;       
       }
 
       button.goToGit:hover::after {

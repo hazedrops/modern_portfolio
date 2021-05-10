@@ -1,6 +1,5 @@
 @import '_config';
 @import '_menu';
-@import '_mobile';
 @import '_projects';
 
 * {
@@ -30,6 +29,12 @@ h3 {
 
   &.lg-heading {
     font-size: 3rem;
+
+    @include mediaMd {
+      line-height: 1;
+      margin-bottom: 0.7em;
+      font-size: 2.4em;
+    }
   }
 
   &.sm-heading {
@@ -37,6 +42,10 @@ h3 {
     margin-bottom: 3rem;
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
+
+    @include mediaMd {
+      font-size: 1.2em;
+    }
   }
 }
 
@@ -80,75 +89,99 @@ main {
       margin-top: 20vh;
     }
   }
+
+  @include mediaLg {
+    padding: 4rem 0;
+  }
+
+  @include mediaMd {
+    align-items: center;
+  }
 }
 
 // About Page
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
 
-.about-info {
-  display: grid;
-  grid-gap: 2.5em;
-  grid-template-areas:
-    'bioimage bio bio bio'
-    'job1 job1 job2 job2';
-  grid-template-columns: repeat(4, 1fr);
+  .about-info {
+    display: grid;
+    grid-gap: 2.5em;
+    grid-template-areas:
+      'bioimage bio bio bio'
+      'job1 job1 job2 job2';
+    grid-template-columns: repeat(4, 1fr);
+    // grid-template-areas:
+    //   'bioimage bio'
+    //   'job1 job2';
+    // grid-template-columns: repeat(4, 1fr);
 
-  .bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    width: 250px;
-    background-size: top;
-    background-position: center;
-    border-radius: 50%;
-    border: $secondary-color 3px solid;
-  }
+    .bio-image {
+      grid-area: bioimage;
+      margin: auto;
+      width: 250px;
+      background-size: top;
+      background-position: center;
+      border-radius: 50%;
+      border: $secondary-color 3px solid;
+    }
 
-  .bio {
-    grid-area: bio;
-    font-size: 1.3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    .bio {
+      grid-area: bio;
+      font-size: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-    // h3 {
-    //   font-size: 1.2em;
+    .job-1 {
+      grid-area: job1;
+
+      h3 {
+        font-size: 1.5em;
+        font-weight: 500;
+        margin-bottom: 0.8em;
+      }
+
+      @include mediaLg {
+        // width: 50%;
+      }
+    }
+
+    .job-2 {
+      grid-area: job2;
+
+      h3 {
+        font-size: 1.5em;
+        font-weight: 500;
+        margin-bottom: 0.8em;
+      }
+
+      @include mediaLg {
+        width: 50%;
+      }
+    }
+
+    // .job-3 {
+    //   grid-area: job3;
     // }
 
-    // p {
-    //   font-size: 1em;
-    // }
-  }
-
-  .job-1 {
-    grid-area: job1;
-
-    h3 {
-      font-size: 1.5em;
-      font-weight: 500;
-      margin-bottom: 0.8em;
+    .job {
+      background: lighten($primary-color, 5);
+      padding: 0.5rem;
+      border-bottom: $secondary-color 5px solid;
     }
-  }
 
-  .job-2 {
-    grid-area: job2;
-
-    h3 {
-      font-size: 1.5em;
-      font-weight: 500;
-      margin-bottom: 0.8em;
+    @include mediaLg {
+      // background: purple;
     }
-  }
 
-  // .job-3 {
-  //   grid-area: job3;
-  // }
-
-  .job {
-    background: lighten($primary-color, 5);
-    padding: 0.5rem;
-    border-bottom: $secondary-color 5px solid;
+    @include mediaMd {
+    }
   }
 }
-
 // Work/Projects
 #workBody .container {
   max-width: 80%;
@@ -156,6 +189,23 @@ main {
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  background: yellow;
+
+  main {
+    @include mediaMd {
+      padding: 4rem 0;
+    }
+  }
+
+  @include mediaLg {
+    max-width: 90%;
+    background: pink;
+  }
+
+  @include mediaMd {
+    max-width: 100%;
+    background: lightblue;
+  }
 }
 
 .projects {
@@ -182,6 +232,14 @@ main {
         @include easeOut;
       }
     }
+  }
+
+  @include mediaXl {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include mediaMd {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -254,3 +312,5 @@ main {
     text-shadow: 1px 1px 4px #fff;
   }
 }
+
+@import '_mobile';
