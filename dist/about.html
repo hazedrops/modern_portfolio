@@ -13,80 +13,81 @@
   </head>
 
   <body>
-    <header>
-      <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-      </div>
-      <nav class="menu">
-        <div class="menu-branding">
-          <div class="portrait"></div>
+    <div class="about-container justify-content-between">   
+      <header>
+        <div class="menu-btn mx-5">
+          <div class="btn-line"></div>
+          <div class="btn-line"></div>
+          <div class="btn-line"></div>
         </div>
-        <ul class="menu-nav">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">
-              Home
-            </a>
-          </li>
-          <li class="nav-item current">
-            <a href="about.html" class="nav-link">
-              About Me
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="work.html" class="nav-link">
-              My Works
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <nav class="menu">
+          <div class="menu-branding">
+            <div class="portrait"></div>
+          </div>
+          <ul class="menu-nav">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">
+                Home
+              </a>
+            </li>
+            <li class="nav-item current">
+              <a href="about.html" class="nav-link">
+                About Me
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="work.html" class="nav-link">
+                My Works
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-    <main id="about">
-      <h1 class="lg-heading">About <span class="text-secondary">Me</span></h1>
-      <h2 class="sm-heading">
-        Let me tell you a few things...
-        
-      <div class="about-info container">
-        <div class="about-top row">
-          <div class="col-3">
-            <img src="img/portrait.jpg" alt="Yoonjeong Choi Portrait"  class="bio-image" />
+      <main id="about" class="justify-content-center">
+        <h1 class="lg-heading">About <span class="text-secondary">Me</span></h1>
+        <h2 class="sm-heading">Let me tell you a few things...</h2>
+          
+        <div class="about-info container mt-5 pt-5">
+          <div class="about-top row justify-content-between mb-5">
+            <div class="col-3 pr-5">
+              <img src="img/portrait.jpg" alt="Yoonjeong Choi Portrait"  class="bio-image" />
+            </div>
+
+            <div class="bio col-8 ml-5 mb-5 pb-5 pt-4">
+              <h3 class="text-secondary">Hello!</h3>
+              <p>
+                My name is Yoonjeong Choi.<br> I'm a Front End Developer from Orange County, California.<br>I am a highly
+                motivated person who is eager to learn new skills.
+              </p>
+            </div>                              
           </div>
 
-          <div class="bio col-9">
-            <h3 class="text-secondary">Hello!</h3>
-            <p>
-              My name is Yoonjeong Choi.<br> I'm a Front End Developer from Orange County, California.<br>I am a highly
-              motivated person who is eager to learn new skills.
-            </p>
-          </div>                              
-        </div>
+          <div class="about-bottom row  justify-content-between">
+            <div class="job job-1 col-5 p-4">
+              <h3>Education</h3>
+              <!-- <h6>Full Stack Developer</h6> -->
+              <p>
+                <strong>Master of Science</strong>, Computer Science, California State University, Hayward (East Bay - current name), 2004</p>
+              <p><strong>Bachelor of Science</strong>, Computer Science, Jeonbuk National University, Korea, 1999</p>
+            </div>
 
-        <div class="about-bottom row">
-          <div class="job job-1 col-6">
-            <h3>Education</h3>
-            <!-- <h6>Full Stack Developer</h6> -->
-            <p>
-              <strong>Master of Science</strong>, Computer Science, California State University, Hayward (East Bay - current name), 2004</p>
-            <p><strong>Bachelor of Science</strong>, Computer Science, Jeonbuk National University, Korea, 1999</p>
+            <div class="job job-2 col-5 p-4">
+              <h3>Experience</h3>
+              <!-- <h6>Front End Developer</h6> -->
+              <p>
+                I've been studying CSS, HTML, JavaScript, and React for a few years. I've been taking many Udemy courses and Youtube lectures to sharpen my coding skills. As I take the classes I could have learned and built many kinds of practical projects. I could accelerate my learning by modifying and upgrading those projects.
+              </p>
+            </div>
           </div>
-
-          <div class="job job-2 col-6">
-            <h3>Experience</h3>
-            <!-- <h6>Front End Developer</h6> -->
-            <p>
-              I've been studying CSS, HTML, JavaScript, and React for a few years. I've been taking many Udemy courses and Youtube lectures to sharpen my coding skills. As I take the classes I could have learned and built many kinds of practical projects. I could accelerate my learning by modifying and upgrading those projects.
-            </p>
-          </div>
-        </div>
-      </div>      
-    </main>
+        </div>      
+      </main>
+    </div> 
 
     <footer id="main-footer">
       Copyright &copy; 2021 <a href="mailto:hazedrops@hotmail.com">Yoonjeong Choi</a>

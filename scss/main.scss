@@ -30,6 +30,10 @@ h3 {
   &.lg-heading {
     font-size: 3rem;
 
+    .text-secondary {
+      color: $secondary-color;
+    }
+
     @include mediaMd {
       line-height: 1;
       margin-bottom: 0.7em;
@@ -46,10 +50,6 @@ h3 {
     @include mediaMd {
       font-size: 1.2em;
     }
-  }
-
-  .text-secondary {
-    color: $secondary-color;
   }
 }
 
@@ -69,7 +69,7 @@ header {
 // }
 
 main {
-  max-width: 80vw;
+  // max-width: 70vw;
   padding: 4rem;
   // height: 100%; // To prevent the footer comes up
   min-height: calc(100vh - 60px); // Making a sticky footer on the bottom
@@ -109,92 +109,83 @@ main {
 }
 
 // About Page
-#about {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // margin: 0 auto;
+.about-container {
+  max-width: 80vw;
 
-  .about-info.container {
-    .about-top.row {
-      //       display: grid;
-      //       grid-gap: 2.5em;
-      //       grid-template-areas:
-      //         'bioimage bio bio bio';
-      //         // 'job1 job1 job2 job2';
-      //       grid-template-columns: 1fr 3fr;
-      .col-3 {
-        .bio-image {
-          // grid-area: bioimage;
-          // margin: auto;
-          width: 250px;
-          background-size: top;
-          background-position: center;
-          border-radius: 50%;
-          border: $secondary-color 3px solid;
-        }
-      }
+  #about {  
+    max-width: 80vw;
 
-      .bio.col-9 {
-        // grid-area: bio;
-        font-size: 1.3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
+    .text-secondary {
+      color: $secondary-color !important;
     }
 
-    .about-bottom {
-      .job-1 {
-        // grid-area: job1;
+    .about-info.container {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
 
-        h3 {
-          font-size: 1.5em;
-          font-weight: 500;
-          margin-bottom: 0.8em;
+      .about-top.row {
+        .col-3 {
+          .bio-image {
+            width: 250px;
+            background-size: top;
+            background-position: center;
+            border-radius: 50%;
+            border: $secondary-color 3px solid;
+          }
         }
 
-        @include mediaLg {
-          // width: 50%;
-        }
-      }
-
-      .job-2 {
-        // grid-area: job2;
-
-        h3 {
-          font-size: 1.5em;
-          font-weight: 500;
-          margin-bottom: 0.8em;
-        }
-
-        @include mediaLg {
-          width: 50%;
+        .bio.col-8 {
+          font-size: 1.3rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
       }
 
-      //     // .job-3 {
-      //     //   grid-area: job3;
-      //     // }
+      .about-bottom {
+        .job-1 {
+          h3 {
+            font-size: 1.5em;
+            font-weight: 500;
+            margin-bottom: 0.8em;
+          }
 
-      .job {
-        background: lighten($primary-color, 5);
-        padding: 0.5rem;
-        border-bottom: $secondary-color 5px solid;
+          // @include mediaLg {
+          //   // width: 50%;
+          // }
+        }
+
+        .job-1.col-5 {
+          width: 48%;
+        }
+
+        .job-2 {
+          // grid-area: job2;
+
+          h3 {
+            font-size: 1.5em;
+            font-weight: 500;
+            margin-bottom: 0.8em;
+          }
+
+          @include mediaLg {
+            width: 50%;
+          }
+        }
+
+        .job-2.col-5 {
+          width: 48%;
+        }
+
+        .job {
+          background: lighten($primary-color, 5);
+          padding: 0.5rem;
+          border-bottom: $secondary-color 5px solid;
+        }
       }
-
-      //     @include mediaLg {
-      //       // background: purple;
-      //     }
-
-      //     @include mediaMd {
-      //       grid-template-areas:
-      //         'bioimage'
-      //         'bio'
-      //         'job1'
-      //         'job2'
-      //         'job3';
-      //       grid-template-columns: 1fr;
     }
   }
 }
@@ -206,7 +197,7 @@ main {
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  background: yellow;
+  // background: yellow;
 
   main {
     @include mediaMd {
@@ -216,12 +207,12 @@ main {
 
   @include mediaLg {
     max-width: 90%;
-    background: pink;
+    // background: pink;
   }
 
   @include mediaMd {
     max-width: 100%;
-    background: lightblue;
+    // background: lightblue;
   }
 }
 
