@@ -1,6 +1,9 @@
 @import '_config';
 @import '_menu';
 @import '_projects';
+@import '_about';
+@import '_work';
+@import '_contact';
 
 * {
   box-sizing: border-box;
@@ -9,9 +12,6 @@
 body {
   @include background;
 
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
   background: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
@@ -20,7 +20,7 @@ body {
   line-height: 1.5;
 }
 
-//Headings
+// Headings
 h1,
 h2,
 h3 {
@@ -42,10 +42,15 @@ h3 {
   }
 
   &.sm-heading {
+    width: 70vw;
     font-size: 1.5rem;
     margin-bottom: 3rem;
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
+
+    @include mediaXxl {
+      padding: 1vh 20vw 1vh 1vw;
+    }
 
     @include mediaMd {
       font-size: 1.2em;
@@ -64,14 +69,8 @@ header {
   width: 100%;
 }
 
-// .text-secondary {
-//   color: $secondary-color;
-// }
-
 main {
-  // max-width: 70vw;
   padding: 4rem;
-  // height: 100%; // To prevent the footer comes up
   min-height: calc(100vh - 60px); // Making a sticky footer on the bottom
 
   .icons {
@@ -87,18 +86,6 @@ main {
     }
   }
 
-  #home {
-    overflow: hidden;
-
-    h1 {
-      margin-top: 20vh;
-
-      @include mediaSm {
-        margin-top: 10vh;
-      }
-    }
-  }
-
   @include mediaLg {
     padding: 4rem 0;
   }
@@ -106,153 +93,49 @@ main {
   @include mediaMd {
     align-items: center;
   }
+
+  // @include mediaXs {
+  //   padding-bottom: 0;
+  //   margin-bottom: 0;
+  // }
 }
 
-// About Page
-.about-container {
-  max-width: 80vw;
+main#home {
+  overflow: hidden;
 
-  #about {  
-    max-width: 80vw;
+  h1 {
+    margin-top: 20vh;
+    font-size: 4em;
 
-    .text-secondary {
-      color: $secondary-color !important;
+    @include mediaXl {
+      font-size: 3em;
     }
 
-    .about-info.container {
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 auto;
+    @include mediaSm {
+      margin-top: 15vh;
+      font-size: 2.5em;
+    }
 
-      .about-top.row {
-        .col-3 {
-          .bio-image {
-            width: 250px;
-            background-size: top;
-            background-position: center;
-            border-radius: 50%;
-            border: $secondary-color 3px solid;
-          }
-        }
-
-        .bio.col-8 {
-          font-size: 1.3rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-      }
-
-      .about-bottom {
-        .job-1 {
-          h3 {
-            font-size: 1.5em;
-            font-weight: 500;
-            margin-bottom: 0.8em;
-          }
-
-          // @include mediaLg {
-          //   // width: 50%;
-          // }
-        }
-
-        .job-1.col-5 {
-          width: 48%;
-        }
-
-        .job-2 {
-          // grid-area: job2;
-
-          h3 {
-            font-size: 1.5em;
-            font-weight: 500;
-            margin-bottom: 0.8em;
-          }
-
-          @include mediaLg {
-            width: 50%;
-          }
-        }
-
-        .job-2.col-5 {
-          width: 48%;
-        }
-
-        .job {
-          background: lighten($primary-color, 5);
-          padding: 0.5rem;
-          border-bottom: $secondary-color 5px solid;
-        }
-      }
+    @include mediaXs {
+      margin-top: 10vh;
+      font-size: 2em;
     }
   }
-}
 
-// Work/Projects
-#workBody .container {
-  max-width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  // background: yellow;
-
-  main {
-    @include mediaMd {
-      padding: 4rem 0;
+  h2 {
+    @include mediaXs {
+      font-size: 1.1em;
     }
   }
+  
 
   @include mediaLg {
-    max-width: 90%;
-    // background: pink;
-  }
+    padding-left: 10vw;
+  }  
 
   @include mediaMd {
-    max-width: 100%;
-    // background: lightblue;
-  }
-}
-
-.projects {
-  display: grid;
-  grid-gap: 2rem;
-  grid-auto-rows: 1fr;
-  grid-template-columns: repeat(3, 1fr);
-
-  .item {
-    a:nth-child(2) {
-      font-size: 0.8em;
-    }
-
-    img {
-      width: 100%;
-      height: 30vh;
-      object-fit: fill;
-      overflow: hidden;
-      border: 3px #fff solid;
-
-      &:hover {
-        opacity: 0.5;
-        border-color: $secondary-color;
-        @include easeOut;
-      }
-    }
-  }
-
-  @include mediaXl {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  @include mediaMd {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include mediaSm {
-    grid-template-columns: 1fr;
-  }
+    padding-left: 5vw;
+  } 
 }
 
 // Button Styles
@@ -280,47 +163,40 @@ main {
   color: #000;
 }
 
-// Contact Page
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 2rem;
-
-  div {
-    font-size: 2rem;
-    border: 3px #fff solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 2rem;
-    @include easeOut;
-
-    &:hover {
-      padding: 0.5rem 1.5rem;
-      background: $secondary-color;
-      color: set-text-color($secondary-color);
-      span {
-        color: set-text-color($secondary-color);
-      }
-    }
-  }
-}
-
+// Footer
 #main-footer {
-  text-align: center;
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
-}
 
-#main-footer {
   a {
     display: inline-block;
+    margin: 0 1vh 0 1vh;
+    color: #fff;
   }
 
   a:hover {
     transform: translate(1px, 1px);
     text-shadow: 1px 1px 4px #fff;
+  }
+
+  // a:visited {
+  //   color: #fff!important;
+  // }
+
+  // a:visited:hover{
+  //   // transform: translate(1px, 1px);
+  //   color: #fff;
+  //   // text-shadow: 1px 1px 4px #fff;
+  // }
+
+  @include mediaXs {
+    padding: 0.5em;
+    font-size: 1em;
+    height: 70px;
   }
 }

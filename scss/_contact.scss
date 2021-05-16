@@ -1,0 +1,78 @@
+// Contact Page
+#contactBody {
+  display: flex;
+  flex-direction: column;
+
+  .contactContainer {
+    max-width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    margin: 0 auto;
+
+    #contact {
+      .boxes {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5em;
+
+        div {
+          font-size: 2em;
+          border: 3px #fff solid;
+          padding: 0.5em 1em;
+          margin-bottom: 1em;
+          @include easeOut;
+
+          &:hover {
+            padding: 0.5rem 1.5rem;
+            background: $secondary-color;
+            color: set-text-color($secondary-color);
+            span {
+              color: set-text-color($secondary-color);
+            }
+          }
+
+          @include mediaXl {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+          }
+
+          @include mediaLg {
+            padding: 0.5em 1em;
+          }
+
+          @include mediaSm {
+            font-size: 1.2em;
+            // margin-bottom: 1.2em;
+          }
+        }
+      }
+
+      @include mediaXxl {
+        // align-items: space-between;
+      }
+
+      @include mediaMd {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    @include mediaXxl {
+      max-width: 60vw;
+      // height: 100vh;
+    }
+
+    @include mediaXl {
+      max-width: 70vw;
+    }
+
+    @include mediaLg {
+      max-width: 80vw;
+    }
+  }
+}

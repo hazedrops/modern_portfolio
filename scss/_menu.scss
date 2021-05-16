@@ -34,6 +34,11 @@
       }
     }
   }
+
+  @include mediaMd {
+    right: 5vw;
+    top: 5vh;
+  }
 }
 
 // Menu Overlay
@@ -77,13 +82,14 @@
     &.show {
       // Slide in from the top
       transform: translate3d(0, 0, 0);
+      padding: 1em 0;
     }
 
     @include mediaMd {
       height: 75vh;
       transform: translate3d(-100%, 0, 0);
       font-size: 24px;
-    }
+    }    
   }
 
   // Branding Side
