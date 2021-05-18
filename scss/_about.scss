@@ -149,6 +149,10 @@
 
         .job-2.col-5 {
           width: 48%;
+          
+          p {
+            margin-bottom: 0;
+          }
 
           @include mediaLg {
             width: 90vw;

@@ -260,6 +260,8 @@
         margin-bottom: 0.8em; }
       #aboutBody .aboutContainer #about .about-info.container .about-bottom .job-2.col-5 {
         width: 48%; }
+        #aboutBody .aboutContainer #about .about-info.container .about-bottom .job-2.col-5 p {
+          margin-bottom: 0; }
         @media screen and (max-width: 900px) {
           #aboutBody .aboutContainer #about .about-info.container .about-bottom .job-2.col-5 {
             width: 90vw; } }
