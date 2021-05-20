@@ -364,6 +364,8 @@
           color: #000; }
           #contactBody .contactContainer #contact .boxes div:hover span {
             color: #000; }
+        #contactBody .contactContainer #contact .boxes div:hover:nth-child(odd) {
+          cursor: pointer; }
         @media screen and (max-width: 1200px) {
           #contactBody .contactContainer #contact .boxes div {
             font-size: 1.5em;

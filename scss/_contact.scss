@@ -36,6 +36,10 @@
             }
           }
 
+          &:hover:nth-child(odd) {
+            cursor: pointer;
+          }
+
           @include mediaXl {
             font-size: 1.5em;
             margin-bottom: 1em;
