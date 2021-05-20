@@ -57,11 +57,17 @@
         a {
           color: #222;
         }
+
+        // a:hover {
+        //   color: #fff;
+        // }      
       }
 
-      // button:hover {
-      //   // color: $secondary-color;
-      // }
+      button:hover {
+        a {
+          color: #fff;
+        }
+      }
 
       button::after {
         content: '';
@@ -69,7 +75,7 @@
         position: absolute;
         z-index: -1;
         padding: 0.85em 0.75em;
-        display: block;
+        display: block;       
       }
 
       button.goToGit::after {
@@ -78,12 +84,18 @@
         top: 0;
         bottom: 0;
         transform: skewX(-45deg) scale(0, 1);
-        transition: all 0.3s ease;       
+        transition: all 0.3s ease;
+        color: #fff;        
       }
 
       button.goToGit:hover::after {
         transform: skewX(-45deg) scale(1, 1);
         transition: all 0.3s ease-out;
+        color: #fff;
+
+        a {
+          color: #fff;
+        }
       }
     }
   }
