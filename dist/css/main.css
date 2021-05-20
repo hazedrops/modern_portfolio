@@ -158,8 +158,10 @@
         overflow: hidden; }
         .projectMain .project-info .project-desc button a {
           color: #222; }
-      .projectMain .project-info .project-desc button:hover a {
-        color: #fff; }
+      .projectMain .project-info .project-desc button:hover {
+        cursor: pointer; }
+        .projectMain .project-info .project-desc button:hover a {
+          color: #fff; }
       .projectMain .project-info .project-desc button::after {
         content: '';
         background: #444;
@@ -173,14 +175,10 @@
         top: 0;
         bottom: 0;
         transform: skewX(-45deg) scale(0, 1);
-        transition: all 0.3s ease;
-        color: #fff; }
+        transition: all 0.3s ease; }
       .projectMain .project-info .project-desc button.goToGit:hover::after {
         transform: skewX(-45deg) scale(1, 1);
-        transition: all 0.3s ease-out;
-        color: #fff; }
-        .projectMain .project-info .project-desc button.goToGit:hover::after a {
-          color: #fff; }
+        transition: all 0.3s ease-out; }
 
 #aboutBody .aboutContainer {
   max-width: 75vw;
