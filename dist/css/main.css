@@ -121,7 +121,8 @@
   transition-delay: 0.4s; }
 
 .projectMain {
-  max-width: 80vw;
+  width: 70vw;
+  max-width: 50rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -138,6 +139,7 @@
       margin-top: 8vh; }
       .projectMain .project-info .project-images .project-image {
         width: 38vw;
+        max-width: 25rem;
         height: 55vh; }
         .projectMain .project-info .project-images .project-image img {
           width: 100%;
@@ -181,7 +183,8 @@
         transition: all 0.3s ease-out; }
 
 #aboutBody .aboutContainer {
-  max-width: 75vw;
+  width: 70vw;
+  max-width: 50rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -291,7 +294,8 @@
       max-width: 90vw; } }
 
 #workBody .container {
-  max-width: 75vw;
+  width: 70vw;
+  max-width: 50rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -340,7 +344,8 @@
   display: flex;
   flex-direction: column; }
   #contactBody .contactContainer {
-    max-width: 75vw;
+    width: 70vw;
+    max-width: 50rem;
     display: flex;
     flex-direction: column;
     align-items: center;
