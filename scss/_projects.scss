@@ -5,7 +5,12 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  // background-color: white;
+
+  .lg-heading {
+    @include mediaXl {
+      font-size: 7vw;
+    }
+  }
 
   .project-info {
     display: flex;
@@ -29,19 +34,43 @@
           padding: 2em;
           // height: 30vh;
         }
+
+        @include mediaLg {
+          height: 40vh;
+        }
+
+        @include mediaMd {
+          width: 60vw;
+          height: 30vh;
+        }
+      }
+
+      @include mediaMd {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     }
 
     .project-desc {
       margin-top: 8vh;
+      display: flex;
+      flex-direction: column;
 
       .text-secondary {
         display: inline-block;
         padding: 0.5em;
-        border-bottom: 1px solid $secondary-color;
+        border-bottom: 1px solid $secondary-color;        
+
+        @include mediaXs {
+          font-size: 1em;
+        }
       }
 
       button {
+        width: 20%;
+        min-width: 10em;
+        display: block;
         font-size: 1em;
         background: $secondary-color;
         color: $primary-color;
@@ -56,9 +85,18 @@
           color: #222;
         }
 
-        // a:hover {
-        //   color: #fff;
+        // @include mediaXxl {
+        //   width: 20%;          
         // }
+
+        @include mediaXl {
+          width: 30%;          
+        }
+
+        @include mediaMd {
+          width: 85vw;
+          align-self: center;          
+        }
       }
 
       button:hover {

@@ -184,16 +184,6 @@ main#home {
     text-shadow: 1px 1px 4px #fff;
   }
 
-  // a:visited {
-  //   color: #fff!important;
-  // }
-
-  // a:visited:hover{
-  //   // transform: translate(1px, 1px);
-  //   color: #fff;
-  //   // text-shadow: 1px 1px 4px #fff;
-  // }
-
   @include mediaXs {
     padding: 0.5em;
     font-size: 1em;

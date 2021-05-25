@@ -127,6 +127,9 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto; }
+  @media screen and (max-width: 1200px) {
+    .projectMain .lg-heading {
+      font-size: 7vw; } }
   .projectMain .project-info {
     display: flex;
     flex-direction: column; }
@@ -144,13 +147,33 @@
         .projectMain .project-info .project-images .project-image img {
           width: 100%;
           padding: 2em; }
+        @media screen and (max-width: 900px) {
+          .projectMain .project-info .project-images .project-image {
+            height: 40vh; } }
+        @media screen and (max-width: 600px) {
+          .projectMain .project-info .project-images .project-image {
+            width: 60vw;
+            height: 30vh; } }
+      @media screen and (max-width: 600px) {
+        .projectMain .project-info .project-images {
+          display: flex;
+          flex-direction: column;
+          align-items: center; } }
     .projectMain .project-info .project-desc {
-      margin-top: 8vh; }
+      margin-top: 8vh;
+      display: flex;
+      flex-direction: column; }
       .projectMain .project-info .project-desc .text-secondary {
         display: inline-block;
         padding: 0.5em;
         border-bottom: 1px solid #eece1a; }
+        @media screen and (max-width: 375px) {
+          .projectMain .project-info .project-desc .text-secondary {
+            font-size: 1em; } }
       .projectMain .project-info .project-desc button {
+        width: 20%;
+        min-width: 10em;
+        display: block;
         font-size: 1em;
         background: #eece1a;
         color: #444;
@@ -160,6 +183,13 @@
         overflow: hidden; }
         .projectMain .project-info .project-desc button a {
           color: #222; }
+        @media screen and (max-width: 1200px) {
+          .projectMain .project-info .project-desc button {
+            width: 30%; } }
+        @media screen and (max-width: 600px) {
+          .projectMain .project-info .project-desc button {
+            width: 85vw;
+            align-self: center; } }
       .projectMain .project-info .project-desc button:hover {
         cursor: pointer; }
         .projectMain .project-info .project-desc button:hover a {
