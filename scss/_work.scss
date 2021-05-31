@@ -16,7 +16,6 @@
 
     .tags {
       ul {
-        // width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -24,7 +23,6 @@
         padding: 0;
 
         .tagList {
-          // width: 8%;
           max-width: 8vw;
           min-width: 6vw;
           list-style: none;
@@ -80,25 +78,12 @@
         }
       } 
       
-      // @include mediaLg {
-      // }       
-      
-      @include mediaXl {
-        // font-size: .7em;
-        // flex-wrap: wrap;
-        // min-width: 30vw;
-        // background-color: pink
-      }          
-
       @include mediaXxl {
         flex-wrap: nowrap;
-        // font-size: .8em;
-        // background-color: yellow;
       }
       
       @include mediaXxxl {
         flex-wrap: nowrap;
-        // background-color: yellow;
       }  
     }
 
@@ -117,13 +102,7 @@
 
   @include mediaLg {
     max-width: 90vw;
-    // background: pink;
-  }
-
-  @include mediaMd {
-    // max-width: 100;
-    // background: lightblue;
-  }
+  }  
 }
 
 .projects {
@@ -150,10 +129,6 @@
         @include easeOut;
       }
     }
-
-    // .btn-light {
-    //   font-weight: 500;
-    // }
   }
 
   @include mediaXxxl {
@@ -167,8 +142,4 @@
   @include mediaMd {
     grid-template-columns: 1fr;
   }
-
-  // @include mediaXs {
-  //   grid-template-columns: 1fr;
-  // }
 }
