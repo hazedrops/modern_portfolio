@@ -5,24 +5,33 @@
 
   .contactContainer {
     width: 70vw;
-    max-width: 50rem;
+    max-width: 50em;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
 
     #contact {
+      // h1, h2 {
+      //   @include mediaXs {
+      //     font-size: 1em;
+      //   }
+      // }
       .boxes {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        max-width: 60vw;
+        margin: auto 0;
         margin-bottom: 1.5em;
 
         div {
           font-size: 2em;
           border: 3px #fff solid;
+          width: 50vw;
+          max-width: 800px;
           padding: 0.5em 1em;
           margin-bottom: 1em;
           @include easeOut;
@@ -47,18 +56,21 @@
 
           @include mediaLg {
             padding: 0.5em 1em;
+            min-width: 60vw;
           }
 
           @include mediaSm {
             font-size: 1.2em;
-            // margin-bottom: 1.2em;
+            min-width: 75vw;
+          }
+
+          @include mediaXs {
+            font-size: .8em;
+            margin-bottom: .6em;
+            min-width: 80vw;
           }
         }
-      }
-
-      @include mediaXxl {
-        // align-items: space-between;
-      }
+      }     
 
       @include mediaMd {
         margin-bottom: 0;
@@ -68,7 +80,6 @@
 
     @include mediaXxl {
       max-width: 60vw;
-      // height: 100vh;
     }
 
     @include mediaXl {
@@ -78,5 +89,17 @@
     @include mediaLg {
       max-width: 80vw;
     }
+
+    @include mediaXs {
+      max-width: 90vw;
+    }
+  }
+
+  #main-footer {
+    @include mediaXs {
+      font-size: .8em;
+    }
   }
 }
+
+

@@ -246,7 +246,7 @@
         @media screen and (max-width: 600px) {
           #aboutBody .aboutContainer #about .about-info.container .about-top.row .col-3 .bio-image {
             width: 180px; } }
-      @media screen and (min-width: 1400px) {
+      @media screen and (max-width: 1400px) {
         #aboutBody .aboutContainer #about .about-info.container .about-top.row .col-3 {
           padding-right: 5vw; } }
       @media screen and (max-width: 1200px) {
@@ -260,7 +260,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center; }
-        @media screen and (min-width: 1400px) {
+        @media screen and (max-width: 1400px) {
           #aboutBody .aboutContainer #about .about-info.container .about-top.row .bio.col-8 {
             padding-left: 5vw; } }
         @media screen and (max-width: 1200px) {
@@ -310,10 +310,10 @@
         #aboutBody .aboutContainer #about .about-info.container .about-bottom {
           flex-direction: column;
           align-items: center; } }
-  @media screen and (min-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     #aboutBody .aboutContainer #about {
       align-items: space-between; } }
-  @media screen and (min-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     #aboutBody .aboutContainer {
       max-width: 60vw; } }
   @media screen and (max-width: 1200px) {
@@ -331,9 +331,67 @@
   align-items: center;
   margin: 0 auto; }
   @media screen and (max-width: 600px) {
+    #workBody .container main .sm-heading {
+      margin-bottom: .5em; } }
+  #workBody .container main .tags ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3em auto;
+    padding: 0; }
+    #workBody .container main .tags ul .tagList {
+      max-width: 8vw;
+      min-width: 6vw;
+      list-style: none;
+      text-align: center;
+      background: rgba(88, 88, 88, 0.5);
+      color: #eece1a;
+      border-radius: 30px;
+      padding: 0.5em;
+      margin: 0.5em; }
+      @media screen and (min-width: 1401px) {
+        #workBody .container main .tags ul .tagList {
+          max-width: 7vw;
+          min-width: 5vw; } }
+      @media screen and (max-width: 1400px) {
+        #workBody .container main .tags ul .tagList {
+          max-width: 10vw;
+          min-width: 8vw; } }
+      @media screen and (max-width: 1200px) {
+        #workBody .container main .tags ul .tagList {
+          max-width: 12vw;
+          min-width: 10vw; } }
+      @media screen and (max-width: 900px) {
+        #workBody .container main .tags ul .tagList {
+          max-width: 18vw;
+          min-width: 16vw; } }
+      @media screen and (max-width: 600px) {
+        #workBody .container main .tags ul .tagList {
+          max-width: 30vw;
+          min-width: 28vw; } }
+      @media screen and (max-width: 375px) {
+        #workBody .container main .tags ul .tagList {
+          max-width: 42vw;
+          min-width: 40vw; } }
+    #workBody .container main .tags ul .tagList:hover,
+    #workBody .container main .tags ul .tagList:focus {
+      cursor: pointer;
+      outline: none;
+      background-color: #eece1a;
+      color: #444; }
+    #workBody .container main .tags ul .tagList.active {
+      background-color: #eece1a;
+      color: #444; }
+  @media screen and (max-width: 1400px) {
+    #workBody .container main .tags {
+      flex-wrap: nowrap; } }
+  @media screen and (min-width: 1401px) {
+    #workBody .container main .tags {
+      flex-wrap: nowrap; } }
+  @media screen and (max-width: 600px) {
     #workBody .container main {
       padding: 4rem 10vw; } }
-  @media screen and (min-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     #workBody .container {
       max-width: 70vw; } }
   @media screen and (max-width: 1200px) {
@@ -360,13 +418,13 @@
       opacity: 0.5;
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1401px) {
     .projects {
       grid-template-columns: repeat(4, 1fr); } }
   @media screen and (max-width: 900px) {
     .projects {
       grid-template-columns: repeat(2, 1fr); } }
-  @media screen and (min-width: 376px) and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     .projects {
       grid-template-columns: 1fr; } }
 
@@ -375,7 +433,7 @@
   flex-direction: column; }
   #contactBody .contactContainer {
     width: 70vw;
-    max-width: 50rem;
+    max-width: 50em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -386,10 +444,14 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      max-width: 60vw;
+      margin: auto 0;
       margin-bottom: 1.5em; }
       #contactBody .contactContainer #contact .boxes div {
         font-size: 2em;
         border: 3px #fff solid;
+        width: 50vw;
+        max-width: 800px;
         padding: 0.5em 1em;
         margin-bottom: 1em;
         transition: all 0.5s ease-out; }
@@ -407,15 +469,22 @@
             margin-bottom: 1em; } }
         @media screen and (max-width: 900px) {
           #contactBody .contactContainer #contact .boxes div {
-            padding: 0.5em 1em; } }
+            padding: 0.5em 1em;
+            min-width: 60vw; } }
         @media screen and (min-width: 376px) and (max-width: 600px) {
           #contactBody .contactContainer #contact .boxes div {
-            font-size: 1.2em; } }
+            font-size: 1.2em;
+            min-width: 75vw; } }
+        @media screen and (max-width: 375px) {
+          #contactBody .contactContainer #contact .boxes div {
+            font-size: .8em;
+            margin-bottom: .6em;
+            min-width: 80vw; } }
     @media screen and (max-width: 600px) {
       #contactBody .contactContainer #contact {
         margin-bottom: 0;
         padding-bottom: 0; } }
-    @media screen and (min-width: 1400px) {
+    @media screen and (max-width: 1400px) {
       #contactBody .contactContainer {
         max-width: 60vw; } }
     @media screen and (max-width: 1200px) {
@@ -424,6 +493,12 @@
     @media screen and (max-width: 900px) {
       #contactBody .contactContainer {
         max-width: 80vw; } }
+    @media screen and (max-width: 375px) {
+      #contactBody .contactContainer {
+        max-width: 90vw; } }
+  @media screen and (max-width: 375px) {
+    #contactBody #main-footer {
+      font-size: .8em; } }
 
 * {
   box-sizing: border-box; }
@@ -477,7 +552,7 @@ h3 {
     margin-bottom: 3rem;
     padding: 0.2rem 1rem;
     background: rgba(73, 73, 73, 0.5); }
-    @media screen and (min-width: 1400px) {
+    @media screen and (max-width: 1400px) {
       h1.sm-heading,
       h2.sm-heading,
       h3.sm-heading {
