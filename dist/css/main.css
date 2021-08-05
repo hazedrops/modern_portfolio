@@ -219,10 +219,26 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto; }
+  @media screen and (max-width: 1200px) {
+    #aboutBody .aboutContainer .menu-btn {
+      right: 2em;
+      top: 8vh; } }
+  @media screen and (max-width: 900px) {
+    #aboutBody .aboutContainer .menu-btn {
+      right: 0;
+      top: 8vh; } }
   @media screen and (max-width: 600px) {
     #aboutBody .aboutContainer .menu-btn {
-      right: -8vw;
+      right: 2em;
       top: 5vh; } }
+  @media screen and (min-width: 376px) and (max-width: 600px) {
+    #aboutBody .aboutContainer .menu-btn {
+      right: -1em;
+      top: 8vh; } }
+  @media screen and (max-width: 375px) {
+    #aboutBody .aboutContainer .menu-btn {
+      right: -1em;
+      top: 8vh; } }
   #aboutBody .aboutContainer #about .text-secondary {
     color: #eece1a !important; }
   #aboutBody .aboutContainer #about .about-info.container {

@@ -9,20 +9,34 @@
   // background: yellow;
 
   .menu-btn {
+    @include mediaXl {
+      right: 2em;
+      top: 8vh;
+    }
+
+    @include mediaLg {
+      right: 0;
+      top: 8vh;
+    }
+
     @include mediaMd {
-      right: -8vw;
+      right: 2em;
       top: 5vh;
     }
+
+    @include mediaSm {
+      right: -1em;
+      top: 8vh;
+    }
+
+    @include mediaXs {
+      right: -1em;
+      top: 8vh;
+    }
+
   }
 
   #about {
-    // h1,
-    // h2 {
-    //   @include mediaMd {
-    //     margin-left: 7vw;
-    //   }
-    // }
-
     .text-secondary {
       color: $secondary-color !important;
     }
