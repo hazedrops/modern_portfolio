@@ -3,6 +3,14 @@ const tagList = document.querySelectorAll(".tagList");
 
 const projectItems = [
   {
+    pageAddr : "./jewelryStoreShoppingCart.html",
+    imgSrc  : "./img/projects/p257.png",
+    imgAlt     : "Jewelry Store Shopping Cart Project",
+    title  : "Jewelry Store Shopping Cart",
+    gitAddr : "https://github.com/hazedrops/JS_JewelryStoreShoppingCart", 
+    tags : ["CSS", "JavaScript"]
+  },
+  {
     pageAddr : "./mealFinder.html",
     imgSrc  : "./img/projects/p141.png",
     imgAlt     : "Meal Finder Project",
