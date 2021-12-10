@@ -60,80 +60,84 @@
       .text-secondary {
         display: inline-block;
         padding: 0.5em;
-        border-bottom: 1px solid $secondary-color;        
+        border-bottom: 1px solid $secondary-color;
 
         @include mediaXs {
           font-size: 1em;
         }
       }
 
-      button {
-        width: 20%;
-        min-width: 10em;
-        display: block;
-        font-size: 1em;
-        background: $secondary-color;
-        color: $primary-color;
-        // border: 0.25rem solid #3498db;
-        padding: 0.85em 0.75em;
-        // margin: 1rem;
-        position: relative;
-        z-index: 1;
-        overflow: hidden;
+      .git-buttons {
+        display: flex;
+        gap: 2em;
 
-        a {
-          color: #222;
+        button {
+          width: 20%;
+          min-width: 10em;
+          font-size: 1em;
+          background: $secondary-color;
+          color: $primary-color;
+          // border: 0.25rem solid #3498db;
+          padding: 0.85em 0.75em;
+          // margin: 1rem;
+          position: relative;
+          z-index: 1;
+          overflow: hidden;
+
+          a {
+            color: #222;
+          }
+
+          // @include mediaXxl {
+          //   width: 20%;
+          // }
+
+          @include mediaXl {
+            width: 30%;
+          }
+
+          @include mediaMd {
+            width: 85vw;
+            align-self: center;
+          }
         }
 
-        // @include mediaXxl {
-        //   width: 20%;          
-        // }
+        button:hover {
+          cursor: pointer;
 
-        @include mediaXl {
-          width: 30%;          
+          a {
+            color: #fff;
+          }
         }
 
-        @include mediaMd {
-          width: 85vw;
-          align-self: center;          
+        button::after {
+          content: '';
+          background: $primary-color;
+          position: absolute;
+          z-index: -1;
+          padding: 0.85em 0.75em;
+          display: block;
         }
-      }
 
-      button:hover {
-        cursor: pointer;
-
-        a {
-          color: #fff;
+        button.goToGit::after {
+          left: -20%;
+          right: -20%;
+          top: 0;
+          bottom: 0;
+          transform: skewX(-45deg) scale(0, 1);
+          transition: all 0.3s ease;
+          // color: #fff;
         }
-      }
 
-      button::after {
-        content: '';
-        background: $primary-color;
-        position: absolute;
-        z-index: -1;
-        padding: 0.85em 0.75em;
-        display: block;
-      }
+        button.goToGit:hover::after {
+          transform: skewX(-45deg) scale(1, 1);
+          transition: all 0.3s ease-out;
+          // color: #fff;
 
-      button.goToGit::after {
-        left: -20%;
-        right: -20%;
-        top: 0;
-        bottom: 0;
-        transform: skewX(-45deg) scale(0, 1);
-        transition: all 0.3s ease;
-        // color: #fff;
-      }
-
-      button.goToGit:hover::after {
-        transform: skewX(-45deg) scale(1, 1);
-        transition: all 0.3s ease-out;
-        // color: #fff;
-
-        // a {
-        //   // color: #fff;
-        // }
+          // a {
+          //   // color: #fff;
+          // }
+        }
       }
     }
   }

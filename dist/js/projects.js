@@ -3,6 +3,14 @@ const tagList = document.querySelectorAll(".tagList");
 
 const projectItems = [
   {
+    pageAddr : "./exchangeRateCalculatorReact.html",
+    imgSrc  : "./img/projects/p261.png",
+    imgAlt     : "Exchange Rate Calculator React",
+    title  : "Exchange Rate Calculator",
+    gitAddr : "https://github.com/hazedrops/React_ExchangeRateCalculator",
+    tags : ["React", "API", "JavaScript"]
+  },
+  {
     pageAddr : "./jewelryStoreShoppingCart.html",
     imgSrc  : "./img/projects/p257.png",
     imgAlt     : "Jewelry Store Shopping Cart Project",
@@ -115,14 +123,14 @@ const projectItems = [
     gitAddr : "https://github.com/hazedrops/JS_DrinkWaterApp",
     tags : ["CSS", "JavaScript"]
   },
-  {
-    pageAddr : "./exchangeRateCalculator.html",
-    imgSrc  : "./img/projects/p81.png",
-    imgAlt     : "Exchange Rate Calculator",
-    title  : "Exchange Rate Calculator",
-    gitAddr : "https://github.com/hazedrops/JS_ExchangeRateCalculatorApp",
-    tags : ["API", "JavaScript"]
-  },
+  // {
+  //   pageAddr : "./exchangeRateCalculator.html",
+  //   imgSrc  : "./img/projects/p81.png",
+  //   imgAlt     : "Exchange Rate Calculator",
+  //   title  : "Exchange Rate Calculator",
+  //   gitAddr : "https://github.com/hazedrops/JS_ExchangeRateCalculatorApp",
+  //   tags : ["API", "JavaScript"]
+  // },
   {
     pageAddr : "./formValidator.html",
     imgSrc  : "./img/projects/p91.png",

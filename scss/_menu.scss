@@ -1,5 +1,5 @@
 // Menu Button
-.menu-btn {
+.menu-btn {  
   position: absolute;
   z-index: 3;
   right: 10vw;
@@ -35,10 +35,10 @@
     }
   }
 
-  @include mediaMd {
-    right: 5vw;
-    top: 5vh;
-  }
+  // @include mediaMd {
+  //   right: 5vw;
+  //   top: 5vh;
+  // }
 }
 
 // Menu Overlay
@@ -89,7 +89,7 @@
       height: 75vh;
       transform: translate3d(-100%, 0, 0);
       font-size: 24px;
-    }    
+    }
   }
 
   // Branding Side
