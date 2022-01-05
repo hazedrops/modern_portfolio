@@ -19,12 +19,12 @@ const projectItems = [
     tags : ["CSS", "JavaScript"]
   },
   {
-    pageAddr : "./mealFinder.html",
-    imgSrc  : "./img/projects/p141.png",
+    pageAddr : "./mealFinderReact.html",
+    imgSrc  : "./img/projects/p272.png",
     imgAlt     : "Meal Finder Project",
     title  : "Meal Finder",
-    gitAddr : "https://github.com/hazedrops/SASS_API_MealFinder", 
-    tags : ["API", "Responsive", "SASS", "JavaScript"]
+    gitAddr : "https://github.com/hazedrops/React_MealFinder", 
+    tags : ["React", "API", "Responsive", "SASS", "JavaScript"]
   },
   {
     pageAddr : "./weatherApp.html",
