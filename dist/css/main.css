@@ -166,49 +166,49 @@
         @media screen and (max-width: 375px) {
           .projectMain .project-info .project-desc .text-secondary {
             font-size: 1em; } }
+      .projectMain .project-info .project-desc button {
+        width: 20%;
+        min-width: 10em;
+        font-size: 1em;
+        background: #eece1a;
+        color: #444;
+        padding: 0.85em 0.75em;
+        position: relative;
+        z-index: 1;
+        overflow: hidden; }
+        .projectMain .project-info .project-desc button a {
+          color: #222; }
+        @media screen and (max-width: 1200px) {
+          .projectMain .project-info .project-desc button {
+            width: 30%; } }
+        @media screen and (max-width: 600px) {
+          .projectMain .project-info .project-desc button {
+            width: 85vw;
+            align-self: center; } }
+      .projectMain .project-info .project-desc button:hover {
+        cursor: pointer; }
+        .projectMain .project-info .project-desc button:hover a {
+          color: #fff; }
+      .projectMain .project-info .project-desc button::after {
+        content: '';
+        background: #444;
+        position: absolute;
+        z-index: -1;
+        padding: 0.85em 0.75em;
+        display: block; }
+      .projectMain .project-info .project-desc .goToGit::after {
+        left: -20%;
+        right: -20%;
+        top: 0;
+        bottom: 0;
+        transform: skewX(-45deg) scale(0, 1);
+        transition: all 0.3s ease; }
+      .projectMain .project-info .project-desc .goToGit:hover::after {
+        transform: skewX(-45deg) scale(1, 1);
+        transition: all 0.3s ease-out; }
       .projectMain .project-info .project-desc .git-buttons {
         display: flex;
         gap: 2em; }
-        .projectMain .project-info .project-desc .git-buttons button {
-          width: 20%;
-          min-width: 10em;
-          font-size: 1em;
-          background: #eece1a;
-          color: #444;
-          padding: 0.85em 0.75em;
-          position: relative;
-          z-index: 1;
-          overflow: hidden; }
-          .projectMain .project-info .project-desc .git-buttons button a {
-            color: #222; }
-          @media screen and (max-width: 1200px) {
-            .projectMain .project-info .project-desc .git-buttons button {
-              width: 30%; } }
-          @media screen and (max-width: 600px) {
-            .projectMain .project-info .project-desc .git-buttons button {
-              width: 85vw;
-              align-self: center; } }
-        .projectMain .project-info .project-desc .git-buttons button:hover {
-          cursor: pointer; }
-          .projectMain .project-info .project-desc .git-buttons button:hover a {
-            color: #fff; }
-        .projectMain .project-info .project-desc .git-buttons button::after {
-          content: '';
-          background: #444;
-          position: absolute;
-          z-index: -1;
-          padding: 0.85em 0.75em;
-          display: block; }
-        .projectMain .project-info .project-desc .git-buttons button.goToGit::after {
-          left: -20%;
-          right: -20%;
-          top: 0;
-          bottom: 0;
-          transform: skewX(-45deg) scale(0, 1);
-          transition: all 0.3s ease; }
-        .projectMain .project-info .project-desc .git-buttons button.goToGit:hover::after {
-          transform: skewX(-45deg) scale(1, 1);
-          transition: all 0.3s ease-out; }
 
 #aboutBody .aboutContainer {
   width: 70vw;
@@ -444,14 +444,15 @@
 
 #contactBody {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: center; }
   #contactBody .contactContainer {
     width: 70vw;
     max-width: 50em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto; }
+    margin: 3rem auto; }
     #contactBody .contactContainer #contact .boxes {
       display: flex;
       flex-direction: column;
