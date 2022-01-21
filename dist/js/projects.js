@@ -27,12 +27,12 @@ const projectItems = [
     tags : ["React", "API", "Responsive", "SASS", "JavaScript"]
   },
   {
-    pageAddr : "./weatherApp.html",
+    pageAddr : "./weatherAppReact.html",
     imgSrc  : "./img/projects/p151.png",
     imgAlt     : "The Weather App Project",
     title  : "Weather App",
-    gitAddr : "https://github.com/hazedrops/SASS_JS_WeatherApp",
-    tags : ["API", "Responsive", "SASS", "JavaScript"]
+    gitAddr : "https://github.com/hazedrops/React_WeatherApp",
+    tags : ["React", "API", "Responsive", "SASS", "JavaScript"]
   },
   {
     pageAddr : "./netflixClone.html",

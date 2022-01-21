@@ -176,8 +176,6 @@
         position: relative;
         z-index: 1;
         overflow: hidden; }
-        .projectMain .project-info .project-desc button a {
-          color: #222; }
         @media screen and (max-width: 1200px) {
           .projectMain .project-info .project-desc button {
             width: 30%; } }
@@ -186,26 +184,30 @@
             width: 85vw;
             align-self: center; } }
       .projectMain .project-info .project-desc button:hover {
-        cursor: pointer; }
-        .projectMain .project-info .project-desc button:hover a {
-          color: #fff; }
+        cursor: pointer;
+        color: #fff;
+        border: 0.1rem solid #eece1a; }
       .projectMain .project-info .project-desc button::after {
         content: '';
+        width: 110%;
         background: #444;
         position: absolute;
         z-index: -1;
         padding: 0.85em 0.75em;
-        display: block; }
-      .projectMain .project-info .project-desc .goToGit::after {
+        display: block;
+        color: #fff;
         left: -20%;
         right: -20%;
         top: 0;
         bottom: 0;
         transform: skewX(-45deg) scale(0, 1);
-        transition: all 0.3s ease; }
-      .projectMain .project-info .project-desc .goToGit:hover::after {
-        transform: skewX(-45deg) scale(1, 1);
-        transition: all 0.3s ease-out; }
+        transition: all 0.3s ease;
+        border: 0.1rem solid #444; }
+      .projectMain .project-info .project-desc button:hover::after {
+        transform: skewX(-45deg) scale(2, 1);
+        transition: all 0.3s ease-out;
+        color: #fff;
+        background-color: #444; }
       .projectMain .project-info .project-desc .git-buttons {
         display: flex;
         gap: 2em; }
