@@ -19,6 +19,12 @@
       opacity: 0; }
     .menu-btn.close .btn-line:nth-child(3) {
       transform: rotate(-45deg) translate(8px, -7px); }
+  @media screen and (max-width: 600px) {
+    .menu-btn {
+      display: flex;
+      flex-direction: column;
+      right: 3rem;
+      top: 3rem; } }
 
 .menu {
   position: fixed;
@@ -167,6 +173,7 @@
           .projectMain .project-info .project-desc .text-secondary {
             font-size: 1em; } }
       .projectMain .project-info .project-desc button {
+        display: flex;
         width: 20%;
         min-width: 10em;
         font-size: 1em;
@@ -179,10 +186,6 @@
         @media screen and (max-width: 1200px) {
           .projectMain .project-info .project-desc button {
             width: 30%; } }
-        @media screen and (max-width: 600px) {
-          .projectMain .project-info .project-desc button {
-            width: 85vw;
-            align-self: center; } }
       .projectMain .project-info .project-desc button:hover {
         cursor: pointer;
         color: #fff;
@@ -211,6 +214,14 @@
       .projectMain .project-info .project-desc .git-buttons {
         display: flex;
         gap: 2em; }
+        @media screen and (max-width: 375px) {
+          .projectMain .project-info .project-desc .git-buttons {
+            flex-direction: column;
+            align-items: center;
+            gap: none; } }
+      @media screen and (max-width: 600px) {
+        .projectMain .project-info .project-desc {
+          width: 90%; } }
 
 #aboutBody .aboutContainer {
   width: 70vw;
@@ -231,7 +242,7 @@
     #aboutBody .aboutContainer .menu-btn {
       right: 2em;
       top: 5vh; } }
-  @media screen and (min-width: 376px) and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     #aboutBody .aboutContainer .menu-btn {
       right: -1em;
       top: 8vh; } }
@@ -488,7 +499,7 @@
           #contactBody .contactContainer #contact .boxes div {
             padding: 0.5em 1em;
             min-width: 60vw; } }
-        @media screen and (min-width: 376px) and (max-width: 600px) {
+        @media screen and (max-width: 600px) {
           #contactBody .contactContainer #contact .boxes div {
             font-size: 1.2em;
             min-width: 75vw; } }
@@ -614,7 +625,7 @@ main#home {
     @media screen and (max-width: 1200px) {
       main#home h1 {
         font-size: 3em; } }
-    @media screen and (min-width: 376px) and (max-width: 600px) {
+    @media screen and (max-width: 600px) {
       main#home h1 {
         margin-top: 15vh;
         font-size: 2.5em; } }
@@ -666,6 +677,6 @@ main#home {
     text-shadow: 1px 1px 4px #fff; }
   @media screen and (max-width: 375px) {
     #main-footer {
-      padding: 0.5em;
+      flex-direction: column;
       font-size: 1em;
       height: 70px; } }

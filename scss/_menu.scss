@@ -1,5 +1,5 @@
 // Menu Button
-.menu-btn {  
+.menu-btn {    
   position: absolute;
   z-index: 3;
   right: 10vw;
@@ -35,10 +35,13 @@
     }
   }
 
-  // @include mediaMd {
-  //   right: 5vw;
-  //   top: 5vh;
-  // }
+  @include mediaSm {
+    display: flex;
+    flex-direction: column;
+    // position: fixed;
+    right: 3rem;
+    top: 3rem;
+  }
 }
 
 // Menu Overlay
