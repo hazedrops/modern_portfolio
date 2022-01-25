@@ -134,7 +134,8 @@
       font-size: 7vw; } }
   .projectMain .project-info {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
     .projectMain .project-info .project-images {
       display: grid;
       grid-gap: 2em;
@@ -172,8 +173,11 @@
         @media screen and (max-width: 375px) {
           .projectMain .project-info .project-desc .text-secondary {
             font-size: 1em; } }
+        .projectMain .project-info .project-desc .text-secondary p {
+          overflow-wrap: break-word; }
       .projectMain .project-info .project-desc button {
         display: flex;
+        justify-content: center;
         width: 20%;
         min-width: 10em;
         font-size: 1em;
@@ -186,13 +190,15 @@
         @media screen and (max-width: 1200px) {
           .projectMain .project-info .project-desc button {
             width: 30%; } }
+        @media screen and (max-width: 600px) {
+          .projectMain .project-info .project-desc button {
+            width: 80%; } }
       .projectMain .project-info .project-desc button:hover {
         cursor: pointer;
         color: #fff;
         border: 0.1rem solid #eece1a; }
       .projectMain .project-info .project-desc button::after {
         content: '';
-        width: 110%;
         background: #444;
         position: absolute;
         z-index: -1;
@@ -213,12 +219,13 @@
         background-color: #444; }
       .projectMain .project-info .project-desc .git-buttons {
         display: flex;
+        justify-content: flex-start;
         gap: 2em; }
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 600px) {
           .projectMain .project-info .project-desc .git-buttons {
             flex-direction: column;
             align-items: center;
-            gap: none; } }
+            gap: 1em; } }
       @media screen and (max-width: 600px) {
         .projectMain .project-info .project-desc {
           width: 90%; } }
@@ -529,7 +536,9 @@
       font-size: .8em; } }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
 body {
   background: #444;
@@ -601,7 +610,6 @@ header {
   width: 100%; }
 
 main {
-  padding: 4rem;
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
@@ -613,9 +621,6 @@ main {
   @media screen and (max-width: 900px) {
     main {
       padding: 4rem 0; } }
-  @media screen and (max-width: 600px) {
-    main {
-      align-items: center; } }
 
 main#home {
   overflow: hidden; }

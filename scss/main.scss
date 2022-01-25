@@ -7,6 +7,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -70,7 +72,6 @@ header {
 }
 
 main {
-  padding: 4rem;
   min-height: calc(100vh - 60px); // Making a sticky footer on the bottom
 
   .icons {
@@ -89,15 +90,6 @@ main {
   @include mediaLg {
     padding: 4rem 0;
   }
-
-  @include mediaMd {
-    align-items: center;
-  }
-
-  // @include mediaXs {
-  //   padding-bottom: 0;
-  //   margin-bottom: 0;
-  // }
 }
 
 main#home {
@@ -166,7 +158,6 @@ main#home {
 // Footer
 #main-footer {
   display: flex;
-  // flex: 1;
   justify-content: center;
   align-items: center;
   padding: 1em;
