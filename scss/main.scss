@@ -73,6 +73,15 @@ header {
 
 main {
   min-height: calc(100vh - 60px); // Making a sticky footer on the bottom
+  padding-left: 5em;
+
+  @include mediaSm {
+    padding-left: 2em;
+  }
+  
+  // @include mediaXs {
+  //   padding-left: 2em;
+  // }
 
   .icons {
     margin-top: 1rem;
@@ -94,6 +103,7 @@ main {
 
 main#home {
   overflow: hidden;
+  padding: 5vw;
 
   h1 {
     margin-top: 20vh;
