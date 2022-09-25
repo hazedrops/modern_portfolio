@@ -1,15 +1,16 @@
-const projects = document.querySelector(".projects");
-const tagList = document.querySelectorAll(".tagList");
+const projects = document.querySelector('.projects')
+
+const tagList = document.querySelectorAll('.tagList')
 
 const projectItems = [
-  {
-    pageAddr: './smallStoreReact.html',
-    imgSrc: './img/projects/p281.png',
-    imgAlt: 'Small Store React',
-    title: 'Small Store Website in React',
-    gitAddr: 'https://github.com/hazedrops/React_SmallStore',
-    tags: ['React', 'API', 'JavaScript', 'Responsive', 'SASS'],
-  },
+  // {
+  //   pageAddr: './smallStoreReact.html',
+  //   imgSrc: './img/projects/p281.png',
+  //   imgAlt: 'Small Store React',
+  //   title: 'Small Store Website in React',
+  //   gitAddr: 'https://github.com/hazedrops/React_SmallStore',
+  //   tags: ['React', 'API', 'JavaScript', 'Responsive', 'SASS'],
+  // },
   {
     pageAddr: './exchangeRateCalculatorReact.html',
     imgSrc: './img/projects/p261.png',
@@ -220,112 +221,106 @@ const projectItems = [
   },
 ]
 
-let previousIdx = 0;
+let previousIdx = 0
 
 const createProjectsDiv = (project, projects) => {
-  const item = document.createElement("div");  
-  item.classList.add("item");
+  const item = document.createElement('div')
+  item.classList.add('item')
 
-  const imgLink = document.createElement("a"); 
-  imgLink.href = `${project.pageAddr}`;
+  const imgLink = document.createElement('a')
+  imgLink.href = `${project.pageAddr}`
 
-  const img = document.createElement("img");
-  img.src = project.imgSrc;
-  img.alt = project.imgAlt;
-  imgLink.append(img);
+  const img = document.createElement('img')
+  img.src = project.imgSrc
+  img.alt = project.imgAlt
+  imgLink.append(img)
 
-  const titleLink = document.createElement("a"); 
-  titleLink.classList.add("btn-light");
-  titleLink.target = "_blank";    
-  titleLink.innerHTML = `<i class="fas fa-eye"></i> ${project.title}`;
+  const titleLink = document.createElement('a')
+  titleLink.classList.add('btn-light')
+  titleLink.target = '_blank'
+  titleLink.innerHTML = `<i class="fas fa-eye"></i> ${project.title}`
 
-  titleLink.href = `${project.pageAddr}`;
+  titleLink.href = `${project.pageAddr}`
 
-  const gitLink = document.createElement("a"); 
-  gitLink.classList.add("btn-dark");
-  gitLink.target = "_blank";   
-  gitLink.href = `${project.gitAddr}`;
-  gitLink.innerHTML = `<i class="fab fa-github"></i> Github`;
-  gitLink.href = `${project.gitAddr}`;  
+  const gitLink = document.createElement('a')
+  gitLink.classList.add('btn-dark')
+  gitLink.target = '_blank'
+  gitLink.href = `${project.gitAddr}`
+  gitLink.innerHTML = `<i class="fab fa-github"></i> Github`
+  gitLink.href = `${project.gitAddr}`
 
-  item.append(imgLink);
-  item.append(titleLink);
-  item.append(gitLink);
+  item.append(imgLink)
+  item.append(titleLink)
+  item.append(gitLink)
 
-  projects.append(item);    
+  projects.append(item)
 
-  return projects;
-};
+  return projects
+}
 
 const filterProjectDiv = (projectItems, tag) => {
-  projects.innerHTML = "";
+  projects.innerHTML = ''
 
-  projectItems.forEach( project => {
-    if(!project.tags.includes(tag) && (tag !== "All")) {
-      return;
+  projectItems.forEach((project) => {
+    if (!project.tags.includes(tag) && tag !== 'All') {
+      return
     }
 
-    createProjectsDiv(project, projects);
-  });
-
+    createProjectsDiv(project, projects)
+  })
 }
 
 tagList.forEach((list, index) => {
-  list.addEventListener("click", () => {
-    tagList[previousIdx].classList.remove("active");
+  list.addEventListener('click', () => {
+    tagList[previousIdx].classList.remove('active')
 
-    list.classList.add("active");
+    list.classList.add('active')
 
-    switch(list.innerText) {
+    switch (list.innerText) {
       case 'JavaScript':
-        filterProjectDiv(projectItems, "JavaScript");
-        break;
+        filterProjectDiv(projectItems, 'JavaScript')
+        break
 
       case 'CSS':
-        filterProjectDiv(projectItems, "CSS");
-        break;
+        filterProjectDiv(projectItems, 'CSS')
+        break
 
       case 'SASS':
-        filterProjectDiv(projectItems, "SASS");
-        break;
+        filterProjectDiv(projectItems, 'SASS')
+        break
 
       case 'Responsive':
-        filterProjectDiv(projectItems, "Responsive");
-        break;
+        filterProjectDiv(projectItems, 'Responsive')
+        break
 
       case 'API':
-        filterProjectDiv(projectItems, "API");
-        break;
-      
+        filterProjectDiv(projectItems, 'API')
+        break
+
       case 'Library':
-        filterProjectDiv(projectItems, "Library");
-        break;
+        filterProjectDiv(projectItems, 'Library')
+        break
 
       case 'React':
-        filterProjectDiv(projectItems, "React");
-        break;
-      
+        filterProjectDiv(projectItems, 'React')
+        break
+
       case 'Game':
-        filterProjectDiv(projectItems, "Game");
-        break;
+        filterProjectDiv(projectItems, 'Game')
+        break
 
       case 'Audio':
-        filterProjectDiv(projectItems, "Audio");
-        break;
+        filterProjectDiv(projectItems, 'Audio')
+        break
 
       default:
-        filterProjectDiv(projectItems, "All");
-        break;
+        filterProjectDiv(projectItems, 'All')
+        break
     }
 
-    previousIdx = index;
-    console.log(previousIdx);
-  });  
-});
+    previousIdx = index
+    console.log(previousIdx)
+  })
+})
 
-filterProjectDiv(projectItems, "All");
-
-
-
-
-
+filterProjectDiv(projectItems, 'All')

@@ -1,8 +1,8 @@
 .menu-btn {
   position: absolute;
   z-index: 3;
-  right: 10vw;
-  top: 10vh;
+  right: 10em;
+  top: 10em;
   cursor: pointer;
   transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
@@ -23,8 +23,8 @@
     .menu-btn {
       display: flex;
       flex-direction: column;
-      right: 3rem;
-      top: 3rem; } }
+      right: 3em;
+      top: 3em; } }
 
 .menu {
   position: fixed;
@@ -128,7 +128,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto; }
+  margin: 3em auto 1em; }
   @media screen and (max-width: 1200px) {
     .projectMain .lg-heading {
       font-size: 7vw; } }
@@ -142,7 +142,7 @@
       grid-auto-rows: 1fr;
       grid-template-columns: repeat(2, 1fr);
       justify-content: space-between;
-      margin-top: 8vh; }
+      margin-top: 4vh; }
       .projectMain .project-info .project-images .project-image {
         width: 38vw;
         max-width: 25rem;
@@ -163,7 +163,7 @@
           flex-direction: column;
           align-items: center; } }
     .projectMain .project-info .project-desc {
-      margin-top: 8vh;
+      margin-top: 4vh;
       display: flex;
       flex-direction: column; }
       .projectMain .project-info .project-desc .text-secondary {
@@ -173,8 +173,9 @@
         @media screen and (max-width: 375px) {
           .projectMain .project-info .project-desc .text-secondary {
             font-size: 1em; } }
-        .projectMain .project-info .project-desc .text-secondary p {
-          overflow-wrap: break-word; }
+      .projectMain .project-info .project-desc p {
+        overflow-wrap: break-word;
+        margin-top: .5em; }
       .projectMain .project-info .project-desc button {
         display: flex;
         justify-content: center;
@@ -186,7 +187,9 @@
         padding: 0.85em 0.75em;
         position: relative;
         z-index: 1;
-        overflow: hidden; }
+        overflow: hidden;
+        border: none;
+        margin-top: 1em; }
         @media screen and (max-width: 1200px) {
           .projectMain .project-info .project-desc button {
             width: 30%; } }
@@ -610,7 +613,11 @@ header {
   width: 100%; }
 
 main {
-  min-height: calc(100vh - 60px); }
+  min-height: calc(100vh - 60px);
+  padding-left: 5em; }
+  @media screen and (max-width: 600px) {
+    main {
+      padding-left: 2em; } }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -623,7 +630,9 @@ main {
       padding: 4rem 0; } }
 
 main#home {
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100vw;
+  max-width: 95%; }
   main#home h1 {
     margin-top: 20vh;
     font-size: 4em; }
@@ -672,7 +681,8 @@ main#home {
   padding: 1em;
   background: #2b2b2b;
   color: #fff;
-  height: 60px; }
+  height: 60px;
+  margin-top: 2em; }
   #main-footer a {
     display: inline-block;
     margin: 0 1vh 0 1vh;
