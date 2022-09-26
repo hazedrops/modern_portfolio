@@ -12,6 +12,14 @@ const projectItems = [
   //   tags: ['React', 'API', 'JavaScript', 'Responsive', 'SASS'],
   // },
   {
+    pageAddr: './houseMarketplaceReact.html',
+    imgSrc: './img/projects/p291.png',
+    imgAlt: 'House Marketplace React',
+    title: 'House Marketplace',
+    gitAddr: 'https://github.com/hazedrops/React_HouseMarketplace',
+    tags: ['React', 'Responsive', 'JavaScript'],
+  },
+  {
     pageAddr: './exchangeRateCalculatorReact.html',
     imgSrc: './img/projects/p261.png',
     imgAlt: 'Exchange Rate Calculator React',
